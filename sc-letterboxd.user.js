@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        sc-letterboxd
-// @namespace   https://github.com/nothuck/sc-letterboxd/
-// @version     1.1.1
-// @author      huck
+// @namespace   https://github.com/ltclmb/sc-letterboxd/
+// @version     1.1.2
+// @author      huck AKA nothuck AKA ltclmb
 // @description Add link to Letterboxd to SC torrent page.
 // @homepage    https://secret-cinema.pw/forums.php?action=viewthread&threadid=902
 //
