@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        sc-letterboxd-rating
 // @namespace   https://tampermonkey.net/
-// @version     1.0
+// @version     1.1
 // @author      boisterous-larva
 // @description Add rating and link to Letterboxd to SC torrent pages.
 // @homepage    https://secret-cinema.pw/forums.php?action=viewthread&threadid=902
