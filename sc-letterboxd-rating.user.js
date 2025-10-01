@@ -9,7 +9,7 @@
 // @icon        https://letterboxd.com/favicon.ico
 // @updateURL   https://github.com/boisterous-larva/sc-letterboxd-rating/raw/master/sc-letterboxd-rating.user.js
 // @downloadURL https://github.com/boisterous-larva/sc-letterboxd-rating/raw/master/sc-letterboxd-rating.user.js
-// @match       *://*.secret-cinema.pw/torrents.php?id=*
+// @match       https://*.secret-cinema.pw/torrents.php?id=*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // ==/UserScript==
 
