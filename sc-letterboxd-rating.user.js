@@ -7,8 +7,8 @@
 // @homepage    https://secret-cinema.pw/forums.php?action=viewthread&threadid=902
 //
 // @icon        https://letterboxd.com/favicon.ico
-// @updateURL   https://github.com/boisterous-larva/sc-letterboxd-rating/raw/master/sc-letterboxd-rating.user.js
-// @downloadURL https://github.com/boisterous-larva/sc-letterboxd-rating/raw/master/sc-letterboxd-rating.user.js
+// @updateURL   https://github.com/boisterous-larva/sc-letterboxd-rating/raw/refs/heads/master/sc-letterboxd-rating.user.js
+// @downloadURL https://github.com/boisterous-larva/sc-letterboxd-rating/raw/refs/heads/master/sc-letterboxd-rating.user.js
 // @match       https://*.secret-cinema.pw/torrents.php?id=*
 // @grant       GM.xmlHttpRequest
 // ==/UserScript==
