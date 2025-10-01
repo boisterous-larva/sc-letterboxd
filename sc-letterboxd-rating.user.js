@@ -185,7 +185,6 @@
               const votes = votesElement.textContent.trim(); // e.g., "13K"
 
               // Step 5: Resolve with the results
-              const originalIMDBElement = document.querySelector('.meta__imdb').remove();
               resolve(buildElement(siteName, imdbURL, logoURL, rating, votes)); // Assemble data and build IMDB element.
             } catch (error) {
               console.error('Error:', error.message);
@@ -243,7 +242,6 @@
             }
 
             // Step 5: Resolve with the results
-            const originalRottenElement = document.querySelector('.meta__rotten').remove();
             resolve(buildElement(siteName, url, logoURL, criticsScore, `${audienceScore} / ${reviews}`)); // Assemble data and build element.
           } catch (error) {
             console.error('Error:', error.message);
