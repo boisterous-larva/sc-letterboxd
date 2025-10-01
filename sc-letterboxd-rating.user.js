@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name        sc-letterboxd
-// @namespace   https://github.com/ltclmb/sc-letterboxd/
-// @version     1.1.2
-// @author      huck AKA nothuck AKA ltclmb
-// @description Add link to Letterboxd to SC torrent page.
+// @name        sc-letterboxd-rating
+// @namespace   https://tampermonkey.net/
+// @version     1.0
+// @author      boisterous-larva
+// @description Add rating and link to Letterboxd to SC torrent pages.
 // @homepage    https://secret-cinema.pw/forums.php?action=viewthread&threadid=902
 //
 // @icon        https://letterboxd.com/favicon.ico
-// @updateURL   https://github.com/ltclmb/sc-letterboxd/raw/master/sc-letterboxd.user.js
-// @downloadURL https://github.com/ltclmb/sc-letterboxd/raw/master/sc-letterboxd.user.js
+// @updateURL   https://github.com/boisterous-larva/sc-letterboxd-rating/raw/master/sc-letterboxd-rating.user.js
+// @downloadURL https://github.com/boisterous-larva/sc-letterboxd-rating/raw/master/sc-letterboxd-rating.user.js
 // @match       *://*.secret-cinema.pw/torrents.php?id=*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // ==/UserScript==
