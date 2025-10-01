@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        sc-letterboxd-rating
 // @namespace   https://tampermonkey.net/
-// @version     2.0
+// @version     2.1
 // @author      boisterous-larva
 // @description Add rating and link to Letterboxd to SC torrent pages.
 // @homepage    https://github.com/boisterous-larva/sc-letterboxd-rating/blob/master/sc-letterboxd-rating.user.js
@@ -71,16 +71,6 @@
     img.src = logoLink;
 
     const iconStyle = `
-    .${siteName.toLowerCase()}-chip__icon{
-          grid-area: image;
-          text-align: center;
-          line-height: 40px;
-          font-size: 12px;
-          width: 25px;
-          height: 25px;
-          border-radius: 4%;
-          filter: drop-shadow(0 0 1rem ${ratingColor});
-        }
         .meta-chip {
           display: grid;
           grid-template-areas:
@@ -89,15 +79,27 @@
           grid-template-columns: 32px auto;
           grid-template-rows: auto auto;
           border-radius: 26px;
-          padding: 6px 12px 6px 6px;
+          padding: 6px 12px 6px 12px;
           background: black;
         }
+        .${siteName.toLowerCase()}-chip__icon{
+          grid-area: image;
+          text-align: center;
+          line-height: 40px;
+          font-size: 12px;
+          width: 25px;
+          height: 25px;
+          border-radius: 4%;
+          filter: drop-shadow(0 0 0.3rem ${ratingColor});
+        }
+
         .meta-chip__name {
             color: white;
             grid-area: name;
             display: inline;
             margin: 0;
-            font-weight: 700;
+            font-weight: 400;
+            font-size: 12px;
             line-height: 1;
             align-self: end;
         }
@@ -111,6 +113,7 @@
             align-self: start;
             height: 100%;
             font-weight: 400;
+            font-size: 10px;
         }`;
     const container = document.createElement("div");
     const ratingName = document.createElement("h2");
@@ -119,9 +122,8 @@
     meta_id_tag.className = "meta-chip";
     meta_id_tag.style = "column-gap:4px; row-gap:0; padding-right:18px;";
     ratingName.className = "meta-chip__name";
-    ratingName.style = "font-size:12px; margin:0;";
     ratingValue.className = "meta-chip__value";
-    ratingValue.style = `font-size:12px; color:${ratingColor}; margin:0;`;
+    ratingValue.style = `color:${ratingColor};`;
     meta_id_tag.href = url;
     meta_id_tag.target = "_blank";
     meta_id_tag.append(img);
@@ -130,7 +132,7 @@
     meta_id_tag.append(ratingName);
     meta_id_tag.append(ratingValue);
     container.className = "ratings-container";
-    container.style = `display:flex; margin-top:4px; margin-right:4px;`;
+    container.style = `display:flex; margin-top:4px; gap:6px;`;
     const ratingsContainer = document.querySelector('.ratings-container');
     if (!ratingsContainer) {
       container.append(meta_id_tag);
