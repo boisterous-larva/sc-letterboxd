@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        sc-letterboxd-rating
 // @namespace   https://tampermonkey.net/
-// @version     1.3
+// @version     1.4
 // @author      boisterous-larva
 // @description Add rating and link to Letterboxd to SC torrent pages.
 // @homepage    https://github.com/boisterous-larva/sc-letterboxd-rating/blob/master/sc-letterboxd-rating.user.js
@@ -51,7 +51,7 @@
     const extraHeader = getElementByInnerText("h2", "extra information");
     if (!extraHeader) return;
     let ratingFloat = parseFloat(rating);
-    let ratingColor = "var(--meta-chip-name-fg)"; // Default.
+    let ratingColor = "white"; // Default.
     if (ratingFloat){
       if (siteName === "IMDb") ratingFloat = ratingFloat / 2; // IMDb ratings are out of 10, adjust to match other ratings
       if (siteName === "RT") ratingFloat = (ratingFloat / 100) * 5 // Rotten scores are out of 100, adjust to match other ratings
@@ -76,7 +76,7 @@
         text-align: center;
         line-height: 40px;
         font-size: 14px;
-        color: var(--meta-chip-name-fg);
+        color: black;
         width: 35px;
         height: 35px;
         border-radius: 4%;
