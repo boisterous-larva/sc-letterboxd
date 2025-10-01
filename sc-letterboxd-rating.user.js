@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        sc-letterboxd-rating
 // @namespace   https://tampermonkey.net/
-// @version     1.2
+// @version     1.3
 // @author      boisterous-larva
 // @description Add rating and link to Letterboxd to SC torrent pages.
 // @homepage    https://github.com/boisterous-larva/sc-letterboxd-rating/blob/master/sc-letterboxd-rating.user.js
@@ -82,7 +82,7 @@
         border-radius: 4%;
         filter: drop-shadow(0 0 1rem ${ratingColor});
     }`;
-    const linkbox = document.querySelector(".linkbox").first();
+    const linkbox = document.querySelector(".linkbox"); // Selects the first linkbox on the page. Consider improving this by making it more specific.
     const ratingName = document.createElement("h2");
     const ratingValue = document.createElement("h3");
     const meta_id_tag = document.createElement("a");
