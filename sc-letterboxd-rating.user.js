@@ -33,12 +33,12 @@
 
   }
 
-  function getRottenID() {
-    let rottenURL = document.querySelector('.meta__rotten a').href;
-    if (rottenURL) {
-      handleRotten(rottenURL);
-    } else return;
-  }
+  // function getRottenID() {
+  //   let rottenURL = document.querySelector('.meta__rotten a').href;
+  //   if (rottenURL) {
+  //     handleRotten(rottenURL);
+  //   } else return;
+  // }
 
 
   function getElementByInnerText(tag, text) {
@@ -260,6 +260,6 @@
 }
 
   getIMDBID();
-  getRottenID();
+  // getRottenID();
 
 })();
