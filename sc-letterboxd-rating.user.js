@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        sc-letterboxd-rating
 // @namespace   https://tampermonkey.net/
-// @version     1.5
+// @version     1.6
 // @author      boisterous-larva
 // @description Add rating and link to Letterboxd to SC torrent pages.
 // @homepage    https://github.com/boisterous-larva/sc-letterboxd-rating/blob/master/sc-letterboxd-rating.user.js
@@ -75,10 +75,10 @@
         grid-area: image;
         text-align: center;
         line-height: 40px;
-        font-size: 14px;
+        font-size: 12px;
         color: black;
-        width: 35px;
-        height: 35px;
+        width: 12px;
+        height: 12px;
         border-radius: 4%;
         filter: drop-shadow(0 0 1rem ${ratingColor});
     }`;
@@ -88,9 +88,9 @@
     meta_id_tag.className = "meta-chip";
     meta_id_tag.style = "column-gap:4px; row-gap:0; padding-right:18px;";
     ratingName.className = "meta-chip__name";
-    ratingName.style = "font-size:14px; margin-bottom:0;";
+    ratingName.style = "font-size:12px; margin:0;";
     ratingValue.className = "meta-chip__value";
-    ratingValue.style = `font-size:12px; color:${ratingColor};`;
+    ratingValue.style = `font-size:12px; color:${ratingColor}; margin:0;`;
     meta_id_tag.href = url;
     meta_id_tag.target = "_blank";
     meta_id_tag.append(img);
