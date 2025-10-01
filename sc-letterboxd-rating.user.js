@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        sc-letterboxd-rating
 // @namespace   https://tampermonkey.net/
-// @version     1.1
+// @version     1.2
 // @author      boisterous-larva
 // @description Add rating and link to Letterboxd to SC torrent pages.
 // @homepage    https://github.com/boisterous-larva/sc-letterboxd-rating/blob/master/sc-letterboxd-rating.user.js
