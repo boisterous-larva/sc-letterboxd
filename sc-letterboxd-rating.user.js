@@ -4,8 +4,7 @@
 // @version     1.1
 // @author      boisterous-larva
 // @description Add rating and link to Letterboxd to SC torrent pages.
-// @homepage    https://secret-cinema.pw/forums.php?action=viewthread&threadid=902
-//
+// @homepage    https://github.com/boisterous-larva/sc-letterboxd-rating/blob/master/sc-letterboxd-rating.user.js
 // @icon        https://letterboxd.com/favicon.ico
 // @updateURL   https://github.com/boisterous-larva/sc-letterboxd-rating/raw/refs/heads/master/sc-letterboxd-rating.user.js
 // @downloadURL https://github.com/boisterous-larva/sc-letterboxd-rating/raw/refs/heads/master/sc-letterboxd-rating.user.js
