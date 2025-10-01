@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        sc-letterboxd-rating
 // @namespace   https://tampermonkey.net/
-// @version     1.4
+// @version     1.5
 // @author      boisterous-larva
 // @description Add rating and link to Letterboxd to SC torrent pages.
 // @homepage    https://github.com/boisterous-larva/sc-letterboxd-rating/blob/master/sc-letterboxd-rating.user.js
@@ -48,8 +48,8 @@
 
   function buildElement(siteName, url, logo, rating, count) {
     if (!rating) return;
-    const extraHeader = getElementByInnerText("h2", "extra information");
-    if (!extraHeader) return;
+    const linkbox = document.querySelector(".linkbox"); // Selects the first linkbox on the page. Consider improving this by making it more specific.
+    if (!linkbox) return;
     let ratingFloat = parseFloat(rating);
     let ratingColor = "white"; // Default.
     if (ratingFloat){
@@ -57,12 +57,12 @@
       if (siteName === "RT") ratingFloat = (ratingFloat / 100) * 5 // Rotten scores are out of 100, adjust to match other ratings
       ratingColor =
         ratingFloat < 2.5
-          ? "rgba(212, 36, 36, 0.8)" // Red for ratings below 2.5
+          ? "rgba(212, 36, 36, 0.8)" // Red for ratings below 2.5 (5.0 IMDb and 50% RT)
           : ratingFloat < 3.5
-            ? "rgba(212, 195, 36, 0.8)" // Yellow for ratings 2.5 and above
+            ? "rgba(212, 195, 36, 0.8)" // Yellow for ratings 2.5 and above (5.0 IMDb and 50% RT)
             : ratingFloat < 4.5
-              ? "rgba(0,224,84, 0.8)" // Green for ratings 3.5 and above
-              : "rgba(113, 251, 255, 0.8)"; // Light blue for ratings 4.5 and above
+              ? "rgba(0,224,84, 0.8)" // Green for ratings 3.5 and above (7.0 IMDb and 70& RT)
+              : "rgba(113, 251, 255, 0.8)"; // Light blue for ratings 4.5 and above (9.0 IMDb and 90% RT)
     }
 
     const logoLink = logo;
@@ -82,7 +82,6 @@
         border-radius: 4%;
         filter: drop-shadow(0 0 1rem ${ratingColor});
     }`;
-    const linkbox = document.querySelector(".linkbox"); // Selects the first linkbox on the page. Consider improving this by making it more specific.
     const ratingName = document.createElement("h2");
     const ratingValue = document.createElement("h3");
     const meta_id_tag = document.createElement("a");
